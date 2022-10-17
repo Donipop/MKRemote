@@ -9,12 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6bd3955-afb7-4ba6-b897-285279b156c5" name="Changes" comment="공인 IP 가져오는거 만들어야함">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a6bd3955-afb7-4ba6-b897-285279b156c5" name="Changes" comment="공인 IP 가져오는거 만듦">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MKRemote.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MKRemote.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomKeyHook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomKeyHook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomMouseHook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomMouseHook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +41,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
@@ -75,8 +70,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665983483964</updated>
-      <workItem from="1665983485913" duration="10893000" />
+      <workItem from="1665983485913" duration="10997000" />
     </task>
+    <task id="LOCAL-00001" summary="공인 IP 가져오는거 만듦">
+      <created>1665996636237</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665996636237</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,6 +98,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="공인 IP 가져오는거 만들어야함" />
-    <option name="LAST_COMMIT_MESSAGE" value="공인 IP 가져오는거 만들어야함" />
+    <MESSAGE value="공인 IP 가져오는거 만듦" />
+    <option name="LAST_COMMIT_MESSAGE" value="공인 IP 가져오는거 만듦" />
   </component>
 </project>
