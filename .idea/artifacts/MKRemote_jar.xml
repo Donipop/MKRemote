@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MKRemote:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MKRemote_jar</output-path>
+    <root id="archive" name="MKRemote.jar">
+      <element id="module-output" name="MKRemote" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/jnativehook-2.2.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
