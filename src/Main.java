@@ -9,19 +9,16 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.*;
+import java.util.ArrayList;
 import java.util.Enumeration;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws NativeHookException {
+    public static final int PORT = 8484;
+    public static void main(String[] args) throws NativeHookException, IOException {
         Main main = new Main();
-
-//        GlobalScreen.registerNativeHook();
-        GlobalScreen.addNativeKeyListener(new CustomKeyHook());
-        GlobalScreen.addNativeMouseListener(new CustomMouseHook());
-        GlobalScreen.addNativeMouseMotionListener(new CustomMouseMotionHook());
-        GlobalScreen.addNativeMouseWheelListener(new CustomMouseWheelHook());
-
+        //https://github.com/kwhat/jnativehook
         Scanner sc = new Scanner(System.in);
         System.out.println("1. Server 2. Client");
         int mode = sc.nextInt();
@@ -31,12 +28,33 @@ public class Main {
             main.Client();
         }
     }
-    private void Server(){
+    private void Server() throws IOException {
         System.out.println("Server");
         System.out.println("Your IP : " + getIP());
+        Server server = new Server();
+        server.start();
     }
-    private void Client(){
+    private void Client() throws NativeHookException {
         System.out.println("Client");
+        System.out.println("Server ip input : ");
+        Scanner scanner = new Scanner(System.in);
+        String hostname = scanner.nextLine();
+        System.out.println("Connect... " + hostname);
+        Client client = new Client(hostname);
+        Socket socket = Client.getInstance();
+        client.Connect(socket);
+
+
+        GlobalScreen.registerNativeHook();
+        GlobalScreen.addNativeKeyListener(new CustomKeyHook());
+        GlobalScreen.addNativeMouseListener(new CustomMouseHook());
+        GlobalScreen.addNativeMouseMotionListener(new CustomMouseMotionHook());
+        GlobalScreen.addNativeMouseWheelListener(new CustomMouseWheelHook());
+
+        while (true){
+            String msg = scanner.nextLine();
+            client.Send(msg);
+        }
     }
 
     private String getIP() {

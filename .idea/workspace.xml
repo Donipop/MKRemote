@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="MKRemote:jar" />
+      <artifact name="MKRemote:jar2" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,6 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6bd3955-afb7-4ba6-b897-285279b156c5" name="Changes" comment="공인 IP 가져오는거 만듦">
+      <change afterPath="$PROJECT_DIR$/lib/jnativehook-2.2.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/MKRemote_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/MKRemote_jar2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -41,14 +47,16 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/java/MKRemote",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.51724136"
   }
@@ -71,6 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665983483964</updated>
       <workItem from="1665983485913" duration="10997000" />
+      <workItem from="1666007085066" duration="7805000" />
     </task>
     <task id="LOCAL-00001" summary="공인 IP 가져오는거 만듦">
       <created>1665996636237</created>
