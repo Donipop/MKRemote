@@ -16,7 +16,8 @@ import java.util.Scanner;
 
 public class Main {
     public static final int PORT = 8484;
-    public static void main(String[] args) throws NativeHookException, IOException {
+    public static Client client = null;
+    public static void main(String[] args) throws NativeHookException, IOException, AWTException {
         Main main = new Main();
         //https://github.com/kwhat/jnativehook
         Scanner sc = new Scanner(System.in);
@@ -28,22 +29,27 @@ public class Main {
             main.Client();
         }
     }
-    private void Server() throws IOException {
+    private void Server() throws IOException, AWTException {
         System.out.println("Server");
         System.out.println("Your IP : " + getIP());
         Server server = new Server();
         server.start();
     }
-    private void Client() throws NativeHookException {
+    private void Client() throws NativeHookException, AWTException {
         System.out.println("Client");
         System.out.println("Server ip input : ");
         Scanner scanner = new Scanner(System.in);
-        String hostname = scanner.nextLine();
+        //String hostname = scanner.nextLine();
+        String hostname = "192.168.195.168";
+        if (scanner.nextLine().equals("3")) {
+            hostname = "192.168.195.133";
+        }
+
         System.out.println("Connect... " + hostname);
-        Client client = new Client(hostname);
+
+        client = new Client(hostname);
         Socket socket = Client.getInstance();
         client.Connect(socket);
-
 
         GlobalScreen.registerNativeHook();
         GlobalScreen.addNativeKeyListener(new CustomKeyHook());
@@ -51,10 +57,6 @@ public class Main {
         GlobalScreen.addNativeMouseMotionListener(new CustomMouseMotionHook());
         GlobalScreen.addNativeMouseWheelListener(new CustomMouseWheelHook());
 
-        while (true){
-            String msg = scanner.nextLine();
-            client.Send(msg);
-        }
     }
 
     private String getIP() {

@@ -1,37 +1,80 @@
 import com.github.kwhat.jnativehook.mouse.*;
 
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionListener;
-import java.awt.event.MouseWheelListener;
+import java.awt.*;
 
 public class CustomMouseHook implements NativeMouseListener{
+    MouseHookManager mouseHookManager = MouseHookManager.getInstance();
+
+    public CustomMouseHook() throws AWTException {
+    }
+
+    @Override
     public void nativeMouseClicked(NativeMouseEvent e) {
-        System.out.println("Mouse Clicked: " + e.getPoint());
+        try {
+            mouseHookManager.HookMsg("Mouse:Click:",e);
+        } catch (AWTException ex) {
+            throw new RuntimeException(ex);
+        }
     }
-
+    @Override
     public void nativeMousePressed(NativeMouseEvent e) {
-        System.out.println("Mouse Pressed: " + e.getPoint());
+        try {
+            mouseHookManager.HookMsg("Mouse:Pressed:",e);
+        } catch (AWTException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 
+    @Override
     public void nativeMouseReleased(NativeMouseEvent e) {
-        System.out.println("Mouse Released: " + e.getPoint());
+        try {
+            mouseHookManager.HookMsg("Mouse:Released:",e);
+        } catch (AWTException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 
 }
 class CustomMouseMotionHook implements NativeMouseMotionListener{
-    public void nativeMouseDragged(NativeMouseEvent e) {
-        System.out.println("Mouse Dragged: " + e.getPoint());
+    MouseHookManager mouseHookManager = MouseHookManager.getInstance();
+
+    CustomMouseMotionHook() throws AWTException {
     }
 
+    @Override
+    public void nativeMouseDragged(NativeMouseEvent e) {
+        try {
+            mouseHookManager.HookMsg("Mouse:Dragged:",e);
+        } catch (AWTException ex) {
+            throw new RuntimeException(ex);
+        }
+
+    }
+
+    @Override
     public void nativeMouseMoved(NativeMouseEvent e) {
-        System.out.println("Mouse Moved: " + e.getPoint());
+        try {
+            mouseHookManager.HookMsg("Mouse:Moved:",e);
+        } catch (AWTException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 }
 class CustomMouseWheelHook implements NativeMouseWheelListener {
+    MouseHookManager mouseHookManager = MouseHookManager.getInstance();
+
+    CustomMouseWheelHook() throws AWTException {
+    }
+
+    @Override
     public void nativeMouseWheelMoved(NativeMouseWheelEvent e) {
         //System.out.println("Mouse Wheel Moved: " + e.getWheelRotation());
-        System.out.println("Mouse Wheel Moved: " + e.getWheelDirection() + " " + e.getWheelRotation());
         //왼쪽에서 오른쪽 방향 = 4 회전 = 마이너스 , 오른쪽에서 왼쪽 방향 = 4 회전 = 플러스  5이상이면 앞으로가기 뒤로가기키 적용 회전력이 ㅇㅇ
         //올라가는건 마이너스 내려가는건 플러스
+        try {
+            mouseHookManager.HookMsg("Mouse:Wheel:",e);
+        } catch (AWTException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 }

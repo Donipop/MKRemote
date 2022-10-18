@@ -9,15 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6bd3955-afb7-4ba6-b897-285279b156c5" name="Changes" comment="공인 IP 가져오는거 만듦">
-      <change afterPath="$PROJECT_DIR$/lib/jnativehook-2.2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/MKRemote_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/MKRemote_jar2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a6bd3955-afb7-4ba6-b897-285279b156c5" name="Changes" comment="마우스 움직임까지 완료&#10;클릭,드래그,키보드 이벤트들 해야함">
+      <change afterPath="$PROJECT_DIR$/src/KeyHookManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MouseHookManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomKeyHook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomKeyHook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomMouseHook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomMouseHook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +34,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -58,7 +62,8 @@
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.51724136"
+    "project.structure.side.proportion": "0.51724136",
+    "settings.editor.selected.configurable": "preferences.sourceCode.JavaScript"
   }
 }]]></component>
   <component name="RunManager">
@@ -99,7 +104,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -108,6 +125,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="공인 IP 가져오는거 만들어야함" />
     <MESSAGE value="공인 IP 가져오는거 만듦" />
-    <option name="LAST_COMMIT_MESSAGE" value="공인 IP 가져오는거 만듦" />
+    <MESSAGE value="마우스 움직임까지 완료&#10;클릭,드래그,키보드 이벤트들 해야함" />
+    <option name="LAST_COMMIT_MESSAGE" value="마우스 움직임까지 완료&#10;클릭,드래그,키보드 이벤트들 해야함" />
   </component>
 </project>
