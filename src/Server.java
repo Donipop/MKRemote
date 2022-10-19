@@ -22,7 +22,11 @@ public class Server extends Thread{
             while (true){
                 String msg = dataInputStream.readUTF();
                 System.out.println(msg);
-                mouseHookManager.Mouse_Event(msg);
+                if (msg.contains("Mouse")){
+                    mouseHookManager.Mouse_Event(msg);
+                }else if (msg.contains("Key")){
+                    KeyHookManager.getInstance().Key_Event(msg);
+                }
             }
 
         }catch (Exception e){

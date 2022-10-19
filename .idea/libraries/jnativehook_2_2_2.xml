@@ -4,6 +4,8 @@
       <root url="jar://$USER_HOME$/Downloads/jnativehook-2.2.2.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/jnativehook-2.2.2-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

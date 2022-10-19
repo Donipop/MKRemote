@@ -33,13 +33,16 @@ public class Client{
     }
     public void Send(String msg){
         try {
-            String point = msg.split(":")[2];
-            int x = Integer.parseInt(point.split(",")[0]);
-            int y = Integer.parseInt(point.split(",")[1]);
+            if (msg.contains("Moved")){
+                String point = msg.split(":")[2];
+                int x = Integer.parseInt(point.split(",")[0]);
+                int y = Integer.parseInt(point.split(",")[1]);
 
-            if(x==0 && y==0){
-                return;
+                if(x==0 && y==0){
+                    return;
+                }
             }
+
             OutputStream outputStream = socket.getOutputStream();
             DataOutputStream dataOutputStream = new DataOutputStream(outputStream);
 

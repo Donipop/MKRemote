@@ -9,15 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6bd3955-afb7-4ba6-b897-285279b156c5" name="Changes" comment="마우스 움직임까지 완료&#10;클릭,드래그,키보드 이벤트들 해야함">
-      <change afterPath="$PROJECT_DIR$/src/KeyHookManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MouseHookManager.java" afterDir="false" />
+    <list default="true" id="a6bd3955-afb7-4ba6-b897-285279b156c5" name="Changes" comment="마우스클릭 완료, 키값 보내기 완료&#10;키코드 수정필요">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jnativehook_2_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/jnativehook_2_2_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CustomKeyHook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomKeyHook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomMouseHook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomMouseHook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/KeyHookManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/KeyHookManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MouseHookManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MouseHookManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,25 +46,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/java/MKRemote",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.51724136",
-    "settings.editor.selected.configurable": "preferences.sourceCode.JavaScript"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/java/MKRemote&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.51724136&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.JavaScript&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -85,6 +84,9 @@
       <updated>1665983483964</updated>
       <workItem from="1665983485913" duration="10997000" />
       <workItem from="1666007085066" duration="7805000" />
+      <workItem from="1666082979697" duration="41000" />
+      <workItem from="1666137582920" duration="3957000" />
+      <workItem from="1666146437220" duration="6917000" />
     </task>
     <task id="LOCAL-00001" summary="공인 IP 가져오는거 만듦">
       <created>1665996636237</created>
@@ -93,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665996636237</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="마우스 움직임까지 완료&#10;클릭,드래그,키보드 이벤트들 해야함">
+      <created>1666082999016</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666082999016</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +135,7 @@
     <MESSAGE value="공인 IP 가져오는거 만들어야함" />
     <MESSAGE value="공인 IP 가져오는거 만듦" />
     <MESSAGE value="마우스 움직임까지 완료&#10;클릭,드래그,키보드 이벤트들 해야함" />
-    <option name="LAST_COMMIT_MESSAGE" value="마우스 움직임까지 완료&#10;클릭,드래그,키보드 이벤트들 해야함" />
+    <MESSAGE value="마우스클릭 완료, 키값 보내기 완료&#10;키코드 수정필요" />
+    <option name="LAST_COMMIT_MESSAGE" value="마우스클릭 완료, 키값 보내기 완료&#10;키코드 수정필요" />
   </component>
 </project>

@@ -5,6 +5,10 @@ import java.awt.*;
 
 public class CustomKeyHook implements NativeKeyListener {
     KeyHookManager keyHookManager = KeyHookManager.getInstance();
+
+    public CustomKeyHook() throws AWTException {
+    }
+
     public void nativeKeyPressed(NativeKeyEvent e) {
 //        System.out.println("Key Pressed: " + NativeKeyEvent.getKeyText(e.getKeyCode()));
         try {

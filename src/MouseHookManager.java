@@ -1,6 +1,7 @@
 import com.github.kwhat.jnativehook.mouse.NativeMouseEvent;
 
 import java.awt.*;
+import java.awt.event.InputEvent;
 import java.net.Socket;
 import java.security.PublicKey;
 
@@ -25,6 +26,10 @@ public class MouseHookManager{
         if (KeyHookManager.remote){
             int x = (int)res.getWidth()/2;
             int y = (int)res.getHeight()/2;
+            if(msg.contains("Pressed") || msg.contains("Released")){
+                client.Send(msg + e.getButton());
+            }
+
             client.Send(msg + (e.getPoint().x - x) + "," + (e.getPoint().y - y));
             //System.out.println(msg + (e.getPoint().x - x) + "," + (e.getPoint().y - y));
             Mouse_Center(e);
@@ -49,6 +54,33 @@ public class MouseHookManager{
             int x = pt.getLocation().x + Integer.parseInt(point.split(",")[0]);
             int y = pt.getLocation().y + Integer.parseInt(point.split(",")[1]);
             mouse.mouseMove(x,y);
+        }
+        if (msg.contains("Pressed")){
+            String button = msg.split(":")[2];
+            if(button.contains(",")){
+                return;
+            }
+            if (button.equals("1")){
+                mouse.mousePress(InputEvent.BUTTON1_MASK);
+            }else if (button.equals("3")) {
+                mouse.mousePress(InputEvent.BUTTON2_MASK);
+            }else if (button.equals("2")) {
+                mouse.mousePress(InputEvent.BUTTON3_MASK);
+            }
+
+        }
+        if (msg.contains("Released")){
+            String button = msg.split(":")[2];
+            if(button.contains(",")){
+                return;
+            }
+            if (button.equals("1")) {
+                mouse.mouseRelease(InputEvent.BUTTON1_MASK);
+            }else if (button.equals("3")) {
+                mouse.mouseRelease(InputEvent.BUTTON2_MASK);
+            }else if (button.equals("2")) {
+                mouse.mouseRelease(InputEvent.BUTTON3_MASK);
+            }
         }
     }
 }
